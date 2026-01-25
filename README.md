@@ -47,4 +47,6 @@ I am continuously updating this repository as I learn new concepts and improve m
 * Object-Oriented Programming (OOP)
 * Data Structures and Algorithms in Python
 * Mini projects
-* Working with libraries and fram
+* Working with libraries and frameworks
+## References 
+* https://www.youtube.com/watch?v=UrsmFxEIp5k
