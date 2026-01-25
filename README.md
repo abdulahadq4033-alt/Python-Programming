@@ -38,9 +38,10 @@ I am continuously updating this repository as I learn new concepts and improve m
 
 ## 🧑‍💻 Tools Used
 
-* Python 3
-* VS Code / Any Python IDE
+* Python IDLE
+* VS Code 
 * Command Line / Terminal
+* ChatGPT (for doubt clarification)
 
 ## 📈 Future Plans
 
