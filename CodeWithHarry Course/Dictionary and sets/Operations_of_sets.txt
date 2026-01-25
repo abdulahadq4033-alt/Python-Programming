@@ -1,0 +1,110 @@
+🔢 Operations of Sets in Python
+
+Set operations in Python are mathematical operations used to compare, combine, and analyze sets.
+Below are ALL set operations, explained clearly, exam-ready, and with examples ✅
+
+📌 1. Union ( | or union() )
+
+Combines elements from both sets (no duplicates).
+
+A = {1, 2, 3}
+B = {3, 4, 5}
+
+print(A | B)
+print(A.union(B))
+
+
+📤 Output: {1, 2, 3, 4, 5}
+
+📌 2. Intersection ( & or intersection() )
+
+Returns common elements in both sets.
+
+print(A & B)
+print(A.intersection(B))
+
+
+📤 Output: {3}
+
+📌 3. Difference ( - or difference() )
+
+Elements present in first set but not in second.
+
+print(A - B)
+print(A.difference(B))
+
+
+📤 Output: {1, 2}
+
+📌 4. Symmetric Difference ( ^ or symmetric_difference() )
+
+Elements present in either set but NOT in both.
+
+print(A ^ B)
+print(A.symmetric_difference(B))
+
+
+📤 Output: {1, 2, 4, 5}
+
+📌 5. Subset ( <= or issubset() )
+
+Checks if all elements of one set exist in another.
+
+C = {1, 2}
+
+print(C <= A)
+print(C.issubset(A))
+
+
+📤 Output: True
+
+📌 6. Superset ( >= or issuperset() )
+
+Checks if a set contains all elements of another set.
+
+print(A >= C)
+print(A.issuperset(C))
+
+
+📤 Output: True
+
+📌 7. Disjoint Sets ( isdisjoint() )
+
+Checks if two sets have NO common elements.
+
+D = {6, 7}
+
+print(A.isdisjoint(D))
+
+
+📤 Output: True
+
+📌 8. Membership (in, not in)
+
+Checks if an element exists in a set.
+
+print(2 in A)
+print(9 not in A)
+
+
+📤 Output:
+True
+True
+
+📌 9. Equality ( == )
+
+Checks if two sets contain the same elements.
+
+X = {1, 2, 3}
+Y = {3, 2, 1}
+
+print(X == Y)
+
+
+📤 Output: True
+
+📌 10. Set Length (len() )
+
+Returns number of elements in a set.
+
+print(len(A))
