@@ -1,0 +1,105 @@
+"""
+====================================================
+FUNCTION DEFINITION, FUNCTION CALL & RECURSION
+====================================================
+
+FUNCTION DEFINITION:
+A function definition is the process of creating a function.
+It specifies:
+- The function name
+- Parameters
+- The block of code to be executed
+
+FUNCTION CALL:
+A function call is the process of invoking (using) a function.
+When a function is called, control is transferred to the function.
+
+RECURSION:
+Recursion is a technique where a function calls itself.
+It must have:
+1. Base case – stops recursion
+2. Recursive case – function calls itself
+"""
+
+# ---------------------------
+# FUNCTION DEFINITION
+# ---------------------------
+def greet(name):
+    """
+    This is a FUNCTION DEFINITION.
+    The function 'greet' is defined here.
+    It takes one parameter: name
+    """
+    print("Hello,", name)
+
+
+# ---------------------------
+# FUNCTION CALL
+# ---------------------------
+# The function is CALLED here.
+# Control goes to the function definition.
+greet("Abdul")
+
+
+# ---------------------------
+# RECURSIVE FUNCTION
+# ---------------------------
+def factorial(n):
+    """
+    This function demonstrates RECURSION.
+    The function calls itself to calculate factorial.
+    """
+
+    # BASE CASE
+    # Stops further recursive calls
+    if n == 0 or n == 1:
+        return 1
+
+    # RECURSIVE CASE
+    # Function calls itself
+    return n * factorial(n - 1)
+
+
+# FUNCTION CALL for recursive function
+num = 5
+result = factorial(num)
+print("Factorial of", num, "is", result)
+
+
+"""
+--------------------------------
+RECURSION EXECUTION (n = 5)
+--------------------------------
+
+factorial(5)
+→ 5 * factorial(4)
+→ 5 * 4 * factorial(3)
+→ 5 * 4 * 3 * factorial(2)
+→ 5 * 4 * 3 * 2 * factorial(1)
+→ 5 * 4 * 3 * 2 * 1
+= 120
+
+Each function call is stored in the FUNCTION STACK.
+"""
+
+"""
+-----------------
+IMPORTANT POINTS
+-----------------
+1. Function definition creates a function
+2. Function call executes the function
+3. Recursion means a function calling itself
+4. Base case is mandatory in recursion
+5. Without base case → infinite recursion → stack overflow
+
+ONE-LINE DEFINITIONS:
+
+Function Definition:
+The process of writing a function with a name and body.
+
+Function Call:
+The process of invoking a function to execute its code.
+
+Recursion:
+A technique where a function calls itself to solve a problem.
+"""

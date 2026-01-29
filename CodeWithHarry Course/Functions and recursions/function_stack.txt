@@ -1,0 +1,106 @@
+"""
+==========================
+FUNCTION STACK EXPLANATION
+==========================
+
+A function stack (also called the call stack) is a special memory area
+used by a program to manage function calls.
+
+It works on the principle of:
+LIFO → Last In, First Out
+
+Whenever a function is called:
+1. A stack frame is CREATED
+2. The stack frame is PUSHED onto the function stack
+
+Each stack frame contains:
+- Function parameters
+- Local variables
+- Return address (where to go back after execution)
+
+When the function finishes:
+- Its stack frame is POPPED from the stack
+"""
+
+# Example to demonstrate FUNCTION STACK using recursion
+
+def factorial(n):
+    """
+    This function calculates factorial using recursion.
+    Each recursive call is stored in the function stack.
+    """
+
+    # BASE CASE
+    # When n is 0 or 1, the function returns 1
+    # No further recursive calls are made
+    if n == 0 or n == 1:
+        return 1
+
+    # RECURSIVE CASE
+    # The function calls itself with (n-1)
+    # This call is pushed onto the function stack
+    return n * factorial(n - 1)
+
+
+# MAIN EXECUTION
+n = 3
+result = factorial(n)
+print("Factorial:", result)
+
+"""
+----------------------------
+FUNCTION STACK TRACE (n = 3)
+----------------------------
+
+Step 1: factorial(3) is called
+Stack:
+| factorial(3) |
+
+Step 2: factorial(2) is called
+Stack:
+| factorial(2) |
+| factorial(3) |
+
+Step 3: factorial(1) is called
+Stack:
+| factorial(1) |
+| factorial(2) |
+| factorial(3) |
+
+Step 4: factorial(1) returns 1
+Stack:
+| factorial(2) |
+| factorial(3) |
+
+Step 5: factorial(2) returns 2
+Stack:
+| factorial(3) |
+
+Step 6: factorial(3) returns 6
+Stack:
+| empty |
+
+Final Output: 6
+"""
+
+"""
+-----------------
+IMPORTANT POINTS
+-----------------
+1. Function stack manages function execution
+2. It supports recursion
+3. Each function call has its own stack frame
+4. Too many recursive calls can cause STACK OVERFLOW
+
+STACK OVERFLOW:
+Occurs when the stack memory limit is exceeded
+due to deep or infinite recursion
+"""
+
+"""
+ONE-LINE DEFINITION (FOR EXAMS):
+
+A function stack is a memory structure that stores
+information about active function calls and follows
+the LIFO (Last In, First Out) principle.
+"""
