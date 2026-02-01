@@ -41,3 +41,5 @@ def to_do_list():
         
         else:
             print("Invalid choice. Please choose a valid option.")
+
+to_do_list()
