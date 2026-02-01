@@ -1,0 +1,46 @@
+# Random Number Generation in Python
+
+This program demonstrates how to generate a random number from a specific set of values in Python, specifically `-1`, `0`, and `1`.
+
+## Code Example
+
+```python
+import random
+
+# Generate a random number from the list [-1, 0, 1]
+number = random.choice([-1, 0, 1])
+print(number)
+```
+
+## Explanation
+
+1. **Importing the random module**
+
+   ```python
+   import random
+   ```
+
+   The `random` module provides functions for generating random numbers.
+
+2. **Using `random.choice()`**
+
+   ```python
+   number = random.choice([-1, 0, 1])
+   ```
+
+   * `random.choice()` selects a random element from a list.
+   * Here, the list `[-1, 0, 1]` contains the values we want.
+   * Each time you run the program, `number` will be randomly `-1`, `0`, or `1`.
+
+3. **Printing the result**
+
+   ```python
+   print(number)
+   ```
+
+   * Displays the randomly chosen number on the screen.
+
+## Notes
+
+* This method is simple and ideal when you have a small set of specific numbers.
+* Alternative methods exist, such as using `random.randint()` and mapping numbers, but `random.choice()` is the most straightforw
