@@ -51,3 +51,8 @@ I am continuously updating this repository as I learn new concepts and improve m
 * Working with libraries and frameworks
 ## References 
 * https://www.youtube.com/watch?v=UrsmFxEIp5k
+* https://github.com/Uberi/speech_recognition
+* https://newsapi.org
+* https://www.codewithharry.com/blogpost/python-cheatsheet
+* https://cwh-full-next-space.fra1.cdn.digitaloceanspaces.com/YouTube/The%20Ultimate%20Python%20Handbook.pdf
+* Learning Python: Powerful Object-Oriented Programming 5th edition 
