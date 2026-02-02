@@ -1,0 +1,91 @@
+1. Create two virtual environments, install few packages in the first one. How do you
+create a similar environment in the second one?
+
+
+# Creating Similar Virtual Environments in Python
+
+This README explains how to create **two virtual environments** and make the second one **exactly the same** as the first using the `pip freeze` command.
+
+---
+
+## Step 1: Create the First Virtual Environment
+
+```bash
+python -m venv env1
+```
+
+Activate it (Windows – CMD):
+
+```bash
+env1\Scripts\activate.bat
+```
+
+---
+
+## Step 2: Install Packages in the First Environment
+
+Install the required packages:
+
+```bash
+pip install numpy pandas requests
+```
+
+---
+
+## Step 3: Save Installed Packages Using `pip freeze`
+
+```bash
+pip freeze > requirements.txt
+```
+
+This creates a file named `requirements.txt` containing all installed packages and their exact versions.
+
+Example:
+
+```text
+numpy==1.26.4
+pandas==2.2.1
+requests==2.31.0
+```
+
+---
+
+## Step 4: Create the Second Virtual Environment
+
+```bash
+python -m venv env2
+```
+
+Activate it:
+
+```bash
+env2\Scripts\activate.bat
+```
+
+---
+
+## Step 5: Install the Same Packages in the Second Environment
+
+```bash
+pip install -r requirements.txt
+```
+
+Now, **env2 has the same packages and versions as env1**.
+
+---
+
+## One-Line Explanation (Exam Ready)
+
+> A similar virtual environment is created by generating a `requirements.txt` file using `pip freeze` in the first environment and installing those dependencies in the second environment using `pip install -r requirements.txt`.
+
+---
+
+## Why This Method Is Used
+
+* Ensures identical package versions
+* Prevents dependency conflicts
+* Commonly used in real-world projects and deployment
+
+---
+
+**Suggested file name:** `README.md`
