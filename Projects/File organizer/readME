@@ -1,0 +1,116 @@
+# 📁 Understanding `os` and `shutil` in Python
+
+This guide explains two important Python modules — `os` and `shutil` — using a simple working program.
+
+---
+
+## 🧩 What is `os`?
+
+The `os` module allows Python to interact with your **operating system**.
+
+### 🔧 Common Uses:
+
+* Create folders
+* List files
+* Work with file paths
+* Check if something exists
+
+---
+
+## 📦 What is `shutil`?
+
+The `shutil` module is used for **high-level file operations**.
+
+### 🔧 Common Uses:
+
+* Move files
+* Copy files
+* Delete folders
+
+---
+
+## 🚀 Example Program
+
+```python
+import os
+import shutil
+
+# Step 1: Create a test directory
+folder_name = "test_folder"
+os.makedirs(folder_name, exist_ok=True)
+
+# Step 2: Create some sample files
+file_names = ["file1.txt", "file2.jpg", "file3.pdf"]
+
+for file in file_names:
+    file_path = os.path.join(folder_name, file)
+    with open(file_path, "w") as f:
+        f.write("This is a sample file")
+
+# Step 3: List files in the directory
+print("Files in folder:")
+print(os.listdir(folder_name))
+
+# Step 4: Create a new folder to move files into
+new_folder = os.path.join(folder_name, "moved_files")
+os.makedirs(new_folder, exist_ok=True)
+
+# Step 5: Move all files into new folder
+for file in os.listdir(folder_name):
+    file_path = os.path.join(folder_name, file)
+
+    # Skip directories
+    if os.path.isdir(file_path):
+        continue
+
+    shutil.move(file_path, os.path.join(new_folder, file))
+
+# Step 6: Show final result
+print("\nAfter moving files:")
+print("Main folder:", os.listdir(folder_name))
+print("Moved folder:", os.listdir(new_folder))
+```
+
+---
+
+## 🧠 Explanation
+
+### `os` Module Used Here:
+
+* `os.makedirs()` → Creates folders
+* `os.listdir()` → Lists files in a directory
+* `os.path.join()` → Safely joins file paths
+* `os.path.isdir()` → Checks if path is a folder
+
+### `shutil` Module Used Here:
+
+* `shutil.move()` → Moves files from one folder to another
+
+---
+
+## 🔥 Output
+
+After running the program:
+
+* A folder named `test_folder` is created
+* Files are generated inside it
+* A subfolder `moved_files` is created
+* All files are moved into `moved_files`
+
+---
+
+## 💡 Summary
+
+| Module   | Purpose                                                     |
+| -------- | ----------------------------------------------------------- |
+| `os`     | Interacts with the operating system (files, folders, paths) |
+| `shutil` | Performs file operations like move, copy, delete            |
+
+---
+
+## ✅ Conclusion
+
+* Use `os` to **manage files and directories**
+* Use `shutil` to **manipulate files (move/copy/delete)**
+
+Together, they are powerful tools for automation projects like **file organizers** 🚀
