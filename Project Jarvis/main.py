@@ -6,7 +6,7 @@ import requests
 
 recognizer = sr.Recognizer()
 engine = pyttsx3.init()
-newsapi="<my api key>"
+# newsapi="<my api key>"
 
 def speak(text):
     engine.say(text)
@@ -39,18 +39,18 @@ def processCommand(command):
         song=command.lower().split(" ")[1]
         link = musicLibrary.music[song]
         webbrowser.open(link)
-    elif "news" in command.lower():
-        r=requests.get("https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=<my api key>")
-        if r.status_code == 200:
-            # Parse the JSON response
-            data = r.json()
+    # elif "news" in command.lower():
+    #     r=requests.get("https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=<my api key>")
+    #     if r.status_code == 200:
+    #         # Parse the JSON response
+    #         data = r.json()
             
-            # Extract the articles
-            articles = data.get('articles', [])
+    #         # Extract the articles
+    #         articles = data.get('articles', [])
             
-            # Print the headlines
-            for article in articles:
-                speak(article['title'])
+    #         # Print the headlines
+    #         for article in articles:
+    #             speak(article['title'])
 
 
     else:
@@ -89,5 +89,5 @@ if __name__ == "__main__":
         except sr.UnknownValueError:
             print("Could not understand audio")
 
-        except sr.RequestError as e:
-            print("Google API error:", e)
+        # except sr.RequestError as e:
+        #     print("Google API error:", e)

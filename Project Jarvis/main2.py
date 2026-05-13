@@ -21,7 +21,7 @@ def aiProcess(command):
     response = client.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=[
-            {"role": "system", "content": "You are Jarvis. Give short responses."},
+            {"role": "system", "content": "You are Eclipse. Give short responses."},
             {"role": "user", "content": command}
         ]
     )
@@ -86,8 +86,8 @@ if __name__ == "__main__":
 
             word = recognizer.recognize_google(audio)
 
-            if word.lower() == "jarvis":
-                speak("Ya")
+            if word.lower() == "eclipse":
+                speak("Yes")
 
                 with sr.Microphone() as source:
                     audio = recognizer.listen(source)
